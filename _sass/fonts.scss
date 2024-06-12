@@ -1,0 +1,107 @@
+// @font-face {
+//     font-family: "GraphikVF";
+//     src: url("../../assets/css/Fonts/Graphik-Upright-VF.ttf");
+//     font-weight: normal;
+//     font-style: normal;
+//     font-stretch: 75% 100%;
+//     font-style: oblique 0deg 12deg;
+//     font-weight: 100 900;
+//     :root {
+//         --text-weight: 500;
+//         --text-width: 100;
+//         --text-slant: 0;
+//       }
+//   }
+  
+
+//   @font-face {
+//     font-family: "GraphikVFi";
+//     src: url("../../assets/css/Fonts/Graphik-Italic-VF.ttf");
+//     font-weight: normal;
+//     font-style: normal;
+
+//     font-stretch: 75% 100%;
+//     font-style: oblique 0deg 12deg;
+//     font-weight: 100 900;
+//     :root {
+//         --text-weight: 500;
+//         --text-width: 100;
+//         --text-slant: 0;
+//       }
+//   }
+
+
+
+
+  @font-face {
+    font-family: "GraphikVF";
+    // src: url("../../assets/css/Fonts/Graphik-Upright-VF.eot") format('embedded-opentype'); /* EDIT correction on this line */
+    src: url("../../assets/css/fonts/Graphik-Upright-VF.woff2") format('woff2'), /* Modern Browsers */
+    url("../../assets/css/fonts/Graphik-Upright-VF.ttf") format('truetype'); /* Safari, Android, iOS */
+    font-weight:normal;
+   font-style:normal;
+   font-stretch: 75% 100%;
+   font-style: oblique 0deg 12deg;
+   font-weight: 100 900;
+  //  :root {
+  //      --text-weight: 500;
+  //      --text-width: 100;
+  //      --text-slant: 0;
+  //    }
+ }
+
+ @font-face {
+  font-family: "GraphikVFi";
+  // src: url("../../assets/css/Fonts/Graphik-Italic-VF.eot") format('embedded-opentype'); /* EDIT correction on this line */
+  src: url("../../assets/css/fonts/Graphik-Italic-VF.woff2") format('woff2'), /* Modern Browsers */
+  url("../../assets/css/fonts/Graphik-Italic-VF.ttf") format('truetype'); /* Safari, Android, iOS */
+  font-weight:normal;
+ font-style:normal;
+ font-stretch: 75% 100%;
+ font-style: oblique 0deg 12deg;
+ font-weight: 100 900;
+//  :root {
+//      --text-weight: 500;
+//      --text-width: 100;
+//      --text-slant: 0;
+//    }
+}
+
+.w100 {
+  font-variation-settings: 'wght' 100;
+}
+
+.w200 {
+  font-variation-settings: 'wght' 200;
+}
+
+.w300 {
+  font-variation-settings: 'wght' 300;
+}
+
+.w400 {
+  font-variation-settings: 'wght' 400;
+}
+
+.w500 {
+  font-variation-settings: 'wght' 500;
+}
+
+.w600 {
+  font-variation-settings: 'wght' 600;
+}
+
+.w700 {
+  font-variation-settings: 'wght' 700;
+}
+
+.w800 {
+  font-variation-settings: 'wght' 800;
+}
+
+.w800 {
+  font-variation-settings: 'wght' 900;
+}
+  
+
+  

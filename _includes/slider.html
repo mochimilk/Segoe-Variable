@@ -1,0 +1,207 @@
+<!--<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">-->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
+
+<div id="font-preview">
+
+
+  <div class="font-parameters">
+
+    <form class="font-preview-slider-wrapper">
+      <span>Font Weight: <span id="slider-label-weight" class="slider-label">400</span></span>
+      <div class="preview-slider">
+        <input type="range" name="weightRange" min="100" , max="900" value="400" id="weight-slider" oninput="this.form.weightInput.value=this.value">
+      </div>
+    </form>
+
+    <form class="font-preview-slider-wrapper">
+      <span>Font Size: <span id="slider-label-size" class="slider-label">90</span>px</span>
+      <div class="preview-slider">
+        <input type="range" name="sizeRange" min="12" , max="200" value="90" id="size-slider" oninput="this.form.sizeInput.value=this.value">
+      </div>
+    </form>
+
+    <form class="font-preview-slider-wrapper">
+      <span>Letter Spacing: <span id="slider-label-spacing" class="slider-label">0</span>em</span>
+      <div class="preview-slider">
+        <input type="range" min="-0.075" , max="0.075" step="0.001" value="0" id="space-slider">
+    
+      </div>
+    </form>
+
+    <form class="font-preview-slider-wrapper">
+      <span>Line Height:<span id="slider-label-lh" class="slider-label">1.2</span>em
+      </span>
+      <div class="preview-slider">
+        <input type="range" name="lhRange" min="1" , max="1.8" value="1.2" id="lh-slider" oninput="this.form.lhInput.value=this.value" step="0.01">
+      </div>
+    </form>
+
+
+
+
+    <div class="font-preview-slider-wrapper">
+      <span>Italics</span>
+      <form action="" id="italicsToggle">
+
+        <label class="selected">
+          <input type="radio" name="searchtype" value="one"><i class="ri-subtract-line"></i>
+        </label>
+
+        <label >
+          <input type="radio" name="searchtype" value="two"><i class="ri-italic"></i>
+        </label>
+
+
+      </form>
+    </div>
+
+
+
+
+    <div class="font-preview-slider-wrapper">
+      <span>Alignment</span>
+      <form action="" id="alignToggle">
+        <label class="selected">
+          <input type="radio" name="searchtype" value="one"><i class="ri-align-left"></i>
+        </label>
+
+        <label >
+          <input type="radio" name="searchtype" value="two"><i class="ri-align-center"></i>
+        </label>
+
+        <label>
+          <input type="radio" name="searchtype" value="three"><i class="ri-align-right"></i>
+        </label>
+      </form>
+    </div>
+
+
+
+   
+
+
+  </div>
+
+
+  <div id="preview-content" contentEditable="true">Six javelins thrown by the quick savages whizzed forty paces beyond the mark.</div>
+
+
+  <!--
+<input type="range" min="75", max="100" value="100" id="width-slider">
+<input type="range" min="0", max="12" value="0" id="slant-slider">
+<input type="range" min="-0.075", max="0.075" step="0.005" value="0" id="space-slider">-->
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+<script>
+    /*let weightSlider = document.getElementById("weight-slider");
+let widthSlider = document.getElementById("width-slider");
+let italicSlider = document.getElementById("italic-slider");
+let sizeSlider = document.getElementById("size-slider");
+
+let fontWeight = document.getElementById("font");
+let fontWidth = document.getElementById("font");
+let fontItalic = document.getElementById("font");
+let fontSize = document.getElementById("bla");
+
+
+weightSlider.oninput = function() {
+  fontWeight.style.setProperty('font-weight',weightSlider.value.toString()) 
+}
+widthSlider.oninput = function() {
+  fontWidth.style.setProperty('font-stretch',widthSlider.value.toString()) 
+}
+italicSlider.oninput = function() {
+  fontItalic.style.setProperty('font-style',italicSlider.value.toString()) 
+}
+sizeSlider.oninput = function() {
+  fontSize.style.setProperty('font-size',sizeSlider.value.toString()) 
+}*/
+$("#size-slider").on("input", function () {
+  $("#preview-content").css("font-size", $(this).val() + "px");
+  $("#slider-label-size").text($(this).val());
+});
+
+$("#weight-slider").on("input", function () {
+  $("#preview-content").css("font-weight", $(this).val());
+  $("#slider-label-weight").text($(this).val());
+});
+
+$("#lh-slider").on("input", function () {
+  $("#preview-content").css("line-height", $(this).val() + "em");
+  $("#slider-label-lh").text($(this).val());
+});
+
+$("#width-slider").on("input", function () {
+  $("#preview-content").css("font-stretch", $(this).val() + "%");
+});
+
+/*$("#slant-slider").on("input", function () {
+  $("#preview-content").css("font-style", "oblique " + $(this).val() + "deg");
+});*/
+
+$("#space-slider").on("input", function () {
+  $("#preview-content").css("letter-spacing", $(this).val() + "em");
+  $("#slider-label-spacing").text($(this).val());
+});
+
+
+
+$(document).ready(function (event) {
+  $("#alignToggle input").click(function (event) {
+    //$('#alignTypeToggle > div').css('transform', 'translateX('+$(this).data('location')+')');
+    $(this).parent().siblings().removeClass("selected");
+    $(this).parent().addClass("selected");
+  });
+});
+
+$("#alignToggle label:first-child input").click(function (event) {
+  $("#preview-content").css({
+    "text-align": "left"
+  });
+
+});
+$("#alignToggle label:nth-child(2) input").click(function (event) {
+  $("#preview-content").css({
+    "text-align": "center"
+  });
+});
+$("#alignToggle label:nth-child(3) input").click(function (event) {
+  $("#preview-content").css({
+    "text-align": "right"
+  });
+});
+
+
+// ITALICSTOGGLE
+$(document).ready(function (event) {
+  $("#italicsToggle input").click(function (event) {
+    //$('#italicsTypeToggle > div').css('transform', 'translateX('+$(this).data('location')+')');
+    $(this).parent().siblings().removeClass("selected");
+    $(this).parent().addClass("selected");
+  });
+});
+
+$("#italicsToggle label:first-child input").click(function (event) {
+  $("#preview-content").css({
+    "font-family": "GraphikVF"
+  });
+});
+$("#italicsToggle label:nth-child(2) input").click(function (event) {
+  $("#preview-content").css({
+    "font-family": "GraphikVFi"
+  });
+});
+
+
+/*$('#image').click(function() {
+    $('#preview-content').css({
+        'background-color': 'red',
+        'color': 'white',
+        'font-size': '44px'
+    });
+});*/
+
+</script>

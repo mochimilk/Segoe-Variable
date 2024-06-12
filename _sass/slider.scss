@@ -1,0 +1,304 @@
+#preview-content {
+    /*font-family: 'Roboto Mono',monospace;*/
+    font-family: "GraphikVF";
+    font-stretch: 100%;
+    font-style: oblique 0deg;
+    font-weight: 400;
+    font-size: 90px;
+    letter-spacing: 0em;
+    line-height: 1.2em;
+    width: calc(100% - 64px);
+    margin: 32px auto;
+    // padding: 64px 0px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/*@keyframes example {
+    0%   {font-stretch: 100%;
+    font-style: oblique 0deg;
+    font-weight: 400;}
+    25% {font-stretch: 75%;
+    font-style: oblique 100;
+    font-weight: 100;}
+    65% {font-stretch: 100%;
+    font-style: oblique 0deg;
+    font-weight: 900;}
+    100% {font-stretch: 100%;
+    font-style: oblique 0deg;
+    font-weight: 400;}
+  }*/
+
+/* The element to apply the animation to */
+#font-preview {
+    background-color: $backgroundColor;
+    color: $bodyColor;
+    position: relative;
+    // padding-bottom: 12px;
+
+    /*display: grid;
+    grid-template-columns: 1fr 320px;*/
+}
+
+.font-parameters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto auto;
+    grid-column-gap: 32px;
+    width: calc(100% - 64px);
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 32px 32px 0px 32px;
+    position: sticky;
+    bottom: 12px;
+    background: none;
+
+    border-radius: 8px;
+}
+
+// #invert-button {
+//     border: none;
+//     background: #000;
+//     border-radius: 24px;
+//     height: 48px;
+//     width: 48px;
+//     cursor: pointer;
+//     position: relative;
+//     overflow: hidden;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     transition: 400ms cubic-bezier(0.1, 0.2, 0.3, 0.9);
+// }
+
+// #invert-button:hover {
+//     transform: scale(1.25);
+// }
+
+// #invert-button i {
+//     color: #fff;
+//     font-size: 24px;
+// }
+
+#preview-content {
+
+    color: $bodyColor;
+    position: relative;
+    /*animation-name: example;*/
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.8, 0.1, 0.2, 0.8);
+    outline: none;
+    height: 512px;
+    overflow: scroll;
+    border-bottom: 1px solid $grey1200-opacity30 ;
+}
+
+
+.font-preview-slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    position: relative;
+    padding: 0px;
+
+}
+
+.font-preview-slider-wrapper>span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: $bodyColor;
+}
+
+.slider-label {
+    border: none;
+
+
+    display: inline-block;
+    text-align: left;
+    box-sizing: border-box;
+
+    margin: 0 4px;
+
+
+    font-family: 'GraphikVF';
+    transition: 1s;
+}
+
+#alignToggle, #italicsToggle {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+#alignToggle label, #italicsToggle label {
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+
+}
+
+#alignToggle label:hover, #italicsToggle label:hover {
+    background: $grey1200-opacity30;
+
+}
+
+#alignToggle label.selected, #italicsToggle label.selected {
+    background: $grey1200-opacity30;
+    color: $bodyColor;
+}
+
+#alignToggle label input, #italicsToggle label input {
+    position: absolute;
+    display: none;
+}
+
+.preview-slider {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: $grey1200-opacity30;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    border: 0px solid #000000;
+    height: 12px;
+    width: 12px;
+    border-radius: 8px;
+    background: $bodyColor;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transform: translateY(-50%);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: $grey1200-opacity30;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: $grey1200-opacity30;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: 0px solid #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: $grey1200-opacity30;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #ac51b5;
+    border: 0px solid #000101;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #ac51b5;
+    border: 0px solid #000101;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+
+input[type="range"]::-ms-thumb {
+    border: 0px solid #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+    background: $grey1200-opacity30;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+    background: $grey1200-opacity30;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .font-parameters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 32px;
+        grid-row-gap: 48px;
+        width: calc(100% - 64px);
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0 auto;
+        position: sticky;
+        bottom: 12px;
+        background: none;
+        border-radius: 8px;
+    }
+
+
+    #preview-content {
+        /*font-family: 'Roboto Mono',monospace;*/
+        font-family: "GraphikVF";
+        font-stretch: 100%;
+        font-style: oblique 0deg;
+        font-weight: 400;
+        font-size: 90px;
+        letter-spacing: 0em;
+        line-height: 1.2em;
+        width: calc(100% - 64px);
+        margin: 64px auto;
+        // padding: 64px 0px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    
+  }
