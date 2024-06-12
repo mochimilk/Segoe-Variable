@@ -102,7 +102,7 @@ html {
 body, html{
 background-color: $backgroundColor;
 color: $bodyColor;
-  font-family: 'GraphikVF';
+  font-family: 'SegoeUI-VF';
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -115,7 +115,7 @@ color: $bodyColor;
 
 
 .button {
-  font-family: 'GraphikVF', sans-serif;
+  font-family: 'SegoeUI-VF', sans-serif;
   background-color: $bodyColor;
   border: none;
   color: $backgroundColor;
