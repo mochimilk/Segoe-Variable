@@ -1,5 +1,5 @@
 ---
 layout: default
-title: "Graphik Variable"
+title: "Segoe Variable"
 ---
 
