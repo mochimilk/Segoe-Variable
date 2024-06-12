@@ -4,7 +4,7 @@
 
 // GREENS
 $primary : #3E54F7;
-$tertiary: #6576F9;
+$tertiary: #3243C6;
 $logo: var(--logo);
 
 // GREYS
@@ -65,8 +65,8 @@ html[data-theme="dark"] {
 @media (prefers-color-scheme: dark) {
   html,
   html[data-theme="dark"] {
-    --background-color: #16181D;
-    --light-text-color: #E8EAED;
+    --background-color: #1A1A1A;
+    --light-text-color: #E6E6E6;
     --link-color: rgb(100, 210, 255);
     --main-background-color: rgb(28, 28, 30);
     --main-text-color: rgb(229, 229, 234);
@@ -79,8 +79,8 @@ html[data-theme="dark"] {
   }
 
   html[data-theme="light"] {
-    --background-color: rgb(247, 245, 238);
-    --light-text-color: #181818;
+    --background-color: #E6E6E6;
+    --light-text-color: #1A1A1A;
     --link-color: rgb(0, 112, 201);
     --main-background-color: rgb(255, 255, 255);
     --main-text-color: rgb(51, 51, 51);
@@ -118,22 +118,22 @@ color: $bodyColor;
   font-family: 'SegoeUI-VF', sans-serif;
   background-color: $primary;
   border: none;
-  color: $backgroundColor;
-  padding: 16px 32px;
+  color: #E6E6E6;
+  padding: 13px 24px;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  font-weight: 600;
+  font-size: 14px;
+
+  font-weight: 500;
   // height: 48px;
   line-height: 100%;
 &:hover {
-  background-color: $grey1200-opacity90;
+  background-color: #3243C6;
 }
   &:active {
+    background-color: #6576F9;
     animation: active-bump .1s forwards;
   }
 }
