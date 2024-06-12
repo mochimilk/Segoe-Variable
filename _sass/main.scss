@@ -3,8 +3,8 @@
 // }
 
 // GREENS
-$primary : #1CE783;
-$tertiary: #29A869;
+$primary : #3E54F7;
+$tertiary: #6576F9;
 $logo: var(--logo);
 
 // GREYS
@@ -34,8 +34,8 @@ $bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans
 
 html,
 html[data-theme="light"] {
-  --background-color: #E8EAED;
-  --light-text-color: #16181D;
+  --background-color: #E6E6E6;
+  --light-text-color: #1A1A1A;
   --link-color: rgb(0, 112, 201);
   --main-background-color: rgb(255, 255, 255);
   --main-text-color: rgb(51, 51, 51);
@@ -49,8 +49,8 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-  --background-color: #181818;
-  --light-text-color: rgb(247, 245, 238);
+  --background-color: #1A1A1A;
+  --light-text-color: #E6E6E6;
   --link-color: rgb(100, 210, 255);
   --main-background-color: rgb(28, 28, 30);
   --main-text-color: rgb(229, 229, 234);
@@ -116,7 +116,7 @@ color: $bodyColor;
 
 .button {
   font-family: 'SegoeUI-VF', sans-serif;
-  background-color: $bodyColor;
+  background-color: $primary;
   border: none;
   color: $backgroundColor;
   padding: 16px 32px;
