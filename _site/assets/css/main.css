@@ -28,7 +28,7 @@ body, html { background-color: var(--background-color); color: var(--light-text-
 
 .font-parameters { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr auto auto; grid-column-gap: 32px; width: calc(100% - 64px); max-width: 100%; box-sizing: border-box; padding: 0px; margin: 32px 32px 0px 32px; position: sticky; bottom: 12px; background: none; border-radius: 8px; }
 
-#preview-content { color: var(--light-text-color); position: relative; /*animation-name: example;*/ animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.8, 0.1, 0.2, 0.8); outline: none; height: 512px; overflow: scroll; border-bottom: 1px solid var(--grey1200-opacity30); }
+#preview-content { color: var(--light-text-color); position: relative; /*animation-name: example;*/ animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(0.8, 0.1, 0.2, 0.8); outline: none; height: 512px; overflow: auto; border-bottom: 1px solid var(--grey1200-opacity30); }
 
 .font-preview-slider-wrapper { display: flex; flex-direction: column; width: auto; position: relative; padding: 0px; }
 
