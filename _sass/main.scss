@@ -44,7 +44,7 @@ html[data-theme="light"] {
   --grey900: #586174;
   --grey1200-opacity30: #272C3430;
   --grey1200-opacity90: #272C3490;
-  --logo: #29A869;
+  --logo: #1A1A1A;
 
 }
 
@@ -59,7 +59,7 @@ html[data-theme="dark"] {
   --grey900: #8B94A7;
   --grey1200-opacity30: #ffffff30;
   --grey1200-opacity90: #ffffff90;
-  --logo: #1CE783;
+  --logo: #E6E6E6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,7 +75,7 @@ html[data-theme="dark"] {
     --grey900: #8B94A7;
     --grey1200-opacity30: #ffffff30;
     --grey1200-opacity90: #ffffff90;
-    --logo: #1CE783;
+    --logo: #E6E6E6;
   }
 
   html[data-theme="light"] {
@@ -89,7 +89,7 @@ html[data-theme="dark"] {
     --grey900: #586174;
     --grey1200-opacity30: #272C3430;
     --grey1200-opacity90: #272C3490;
-    --logo: #29A869;
+    --logo: #1A1A1A;
   }
 }
 
