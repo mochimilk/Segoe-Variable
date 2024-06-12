@@ -2,6 +2,18 @@
 //   border: Solid 1px black;
 // }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 // GREENS
 $primary : #3E54F7;
 $tertiary: #3243C6;
@@ -137,7 +149,6 @@ color: $bodyColor;
     animation: active-bump .1s forwards;
   }
 }
-
 
 
 

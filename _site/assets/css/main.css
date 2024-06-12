@@ -1,3 +1,9 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar { display: none; }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body { -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ }
+
 html, html[data-theme="light"] { --background-color: #E6E6E6; --light-text-color: #1A1A1A; --link-color: rgb(0, 112, 201); --main-background-color: rgb(255, 255, 255); --main-text-color: rgb(51, 51, 51); --border-tertiary: rgba(24,24,24, 0.3); --border-tertiary-inverse: rgba(247, 245, 238, 0.3); --grey900: #586174; --grey1200-opacity30: #272C3430; --grey1200-opacity90: #272C3490; --logo: #1A1A1A; }
 
 html[data-theme="dark"] { --background-color: #1A1A1A; --light-text-color: #E6E6E6; --link-color: rgb(100, 210, 255); --main-background-color: rgb(28, 28, 30); --main-text-color: rgb(229, 229, 234); --border-tertiary: rgba(247, 245, 238, 0.3); --border-tertiary-inverse: rgba(24,24,24, 0.3); --grey900: #8B94A7; --grey1200-opacity30: #ffffff30; --grey1200-opacity90: #ffffff90; --logo: #E6E6E6; }
